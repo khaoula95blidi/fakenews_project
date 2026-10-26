@@ -1,0 +1,15 @@
+# Donnees lourdes : a telecharger (voir README)
+data/raw/
+data/tmp_*.tsv
+*.zip
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editeur / systeme
+.vscode/
+.DS_Store
