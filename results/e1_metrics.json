@@ -1,0 +1,35 @@
+{
+  "experiment": "E1 TF-IDF + LogisticRegression",
+  "date": "2026-10-26T13:15:24",
+  "seed": 42,
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 50000,
+    "sublinear_tf": true
+  },
+  "best_C": 1,
+  "val_macro_f1": 0.7608,
+  "test": {
+    "acc": 0.7476,
+    "prec": 0.7487,
+    "rec": 0.747,
+    "macro_f1": 0.747,
+    "auc": 0.8221
+  },
+  "test_accuracy_by_6way": {
+    "0": 0.785,
+    "1": 0.554,
+    "2": 0.616,
+    "3": 0.318,
+    "4": 0.833,
+    "5": 0.647
+  },
+  "n_train": 7792,
+  "n_val": 1469,
+  "n_test": 1450,
+  "test_titles_shared_with_train": 48
+}
