@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "n": {
+    "train": 7432,
+    "val": 1403,
+    "test": 1396
+  },
+  "E1": {
+    "acc": 0.7507163323782235,
+    "prec": 0.752219742063492,
+    "rec": 0.7504864651838715,
+    "macro_f1": 0.7502236536052961,
+    "auc": 0.8218254554709885
+  },
+  "E2": {
+    "best_C": 0.1,
+    "val_macro_f1": 0.8103637864030309,
+    "test": {
+      "acc": 0.8008595988538681,
+      "prec": 0.8008571991592223,
+      "rec": 0.8008448483952807,
+      "macro_f1": 0.8008493797967482,
+      "auc": 0.861538051019319
+    }
+  },
+  "E3": {
+    "best_C": 0.003,
+    "val_macro_f1": 0.6819738885771673,
+    "test": {
+      "acc": 0.6991404011461319,
+      "prec": 0.7001164596273293,
+      "rec": 0.698925260884915,
+      "macro_f1": 0.6986201664189093,
+      "auc": 0.7546542607781801
+    }
+  },
+  "table": {
+    "acc": {
+      "Majoritaire (tout vrai)": 0.5029,
+      "E1 texte TF-IDF": 0.7507,
+      "E2 texte DistilBERT": 0.8009,
+      "E3 image ResNet-18": 0.6991
+    },
+    "macro_f1": {
+      "Majoritaire (tout vrai)": 0.3346,
+      "E1 texte TF-IDF": 0.7502,
+      "E2 texte DistilBERT": 0.8008,
+      "E3 image ResNet-18": 0.6986
+    },
+    "auc": {
+      "Majoritaire (tout vrai)": 0.5,
+      "E1 texte TF-IDF": 0.8218,
+      "E2 texte DistilBERT": 0.8615,
+      "E3 image ResNet-18": 0.7547
+    }
+  },
+  "per_type": {
+    "n": {
+      "0 vrai": 702,
+      "1 satire": 63,
+      "2 trompeur": 212,
+      "3 bots": 21,
+      "4 image manipulee": 347,
+      "5 fausse connexion": 51
+    },
+    "E1": {
+      "0 vrai": 0.791,
+      "1 satire": 0.54,
+      "2 trompeur": 0.618,
+      "3 bots": 0.238,
+      "4 image manipulee": 0.833,
+      "5 fausse connexion": 0.667
+    },
+    "E2": {
+      "0 vrai": 0.803,
+      "1 satire": 0.603,
+      "2 trompeur": 0.675,
+      "3 bots": 0.476,
+      "4 image manipulee": 0.942,
+      "5 fausse connexion": 0.706
+    },
+    "E3": {
+      "0 vrai": 0.736,
+      "1 satire": 0.587,
+      "2 trompeur": 0.486,
+      "3 bots": 0.333,
+      "4 image manipulee": 0.778,
+      "5 fausse connexion": 0.824
+    }
+  },
+  "subreddit_diagnostic": {
+    "acc": 1.0,
+    "macro_f1": 1.0
+  }
+}
