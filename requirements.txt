@@ -2,7 +2,7 @@ pandas==3.0.2
 numpy==2.4.4
 pillow==12.2.0
 requests==2.34.2
-scikit-learn>=1.5
+scikit-learn==1.8.0
 matplotlib>=3.8
 
 # A ajouter quand on les utilise (embeddings sur Kaggle/Colab, demo) :
