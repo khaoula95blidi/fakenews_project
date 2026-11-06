@@ -1,0 +1,73 @@
+{
+  "n": {
+    "train": 7432,
+    "val": 1403,
+    "test": 1396
+  },
+  "part_classe1_vrai": {
+    "train": 0.4974,
+    "val": 0.4975,
+    "test": 0.5029
+  },
+  "accuracy_tout_vrai_test": 0.5029,
+  "six_way": {
+    "train": {
+      "0": 3697,
+      "1": 367,
+      "2": 1106,
+      "3": 137,
+      "4": 1856,
+      "5": 269
+    },
+    "val": {
+      "0": 698,
+      "1": 66,
+      "2": 231,
+      "3": 25,
+      "4": 346,
+      "5": 37
+    },
+    "test": {
+      "0": 702,
+      "1": 63,
+      "2": 212,
+      "3": 21,
+      "4": 347,
+      "5": 51
+    }
+  },
+  "mots_par_titre_train": {
+    "0": 6.1,
+    "1": 9.4
+  },
+  "sous_reddit": {
+    "nombre_train": 21,
+    "part_classe_majoritaire": 1.0,
+    "test_absents_du_train": 0
+  },
+  "periode": {
+    "train": [
+      "2009-01-24",
+      "2019-10-22"
+    ],
+    "val": [
+      "2012-02-04",
+      "2019-10-22"
+    ],
+    "test": [
+      "2011-04-08",
+      "2019-10-22"
+    ]
+  },
+  "fuite": {
+    "titres_communs_train_test": 18,
+    "titres_communs_train_val": 23,
+    "doublons_train": 218,
+    "ids_communs_train_test": 0
+  },
+  "images": {
+    "plus_grand_groupe_meme_taille": 6,
+    "fichiers_remplacement_restants": 0,
+    "fichiers_manquants": 0
+  }
+}

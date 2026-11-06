@@ -1,0 +1,38 @@
+{
+  "etape": "E3ctrl",
+  "nom": "resnet18_gele_lr",
+  "params": {
+    "entree": "image",
+    "representation": "ResNet-18 (gele)",
+    "classifieur": "LogisticRegression, class_weight=balanced, C choisi sur la validation (grille 1e-5 a 1)",
+    "C_retenu": 0.003,
+    "dim_embedding": 512,
+    "n_train": 7432,
+    "n_val": 1403,
+    "n_test": 1396
+  },
+  "metrics": {
+    "accuracy": 0.6991404011461319,
+    "f1_macro": 0.6986201664189093,
+    "auc": 0.7546542607781801,
+    "val_accuracy": 0.6821097647897363,
+    "val_f1_macro": 0.6819738885771673,
+    "val_auc": 0.7396167367757931,
+    "acc_type_vrai": 0.7364672364672364,
+    "n_type_vrai": 702.0,
+    "acc_type_satire": 0.5873015873015873,
+    "n_type_satire": 63.0,
+    "acc_type_trompeur": 0.4858490566037736,
+    "n_type_trompeur": 212.0,
+    "acc_type_bots": 0.3333333333333333,
+    "n_type_bots": 21.0,
+    "acc_type_image_manipulee": 0.7780979827089337,
+    "n_type_image_manipulee": 347.0,
+    "acc_type_fausse_connexion": 0.8235294117647058,
+    "n_type_fausse_connexion": 51.0
+  },
+  "tags": {
+    "source": "notebook Kaggle 02_embeddings_e2_e3 (partie 2)",
+    "avertissement_types": "Types a 6 classes : correspondance des etiquettes en cours de verification ; fausse_connexion : 51 publications ; bots : 21."
+  }
+}

@@ -1,6 +1,6 @@
 {
   "experiment": "E1 TF-IDF + LogisticRegression",
-  "date": "2026-10-26T15:54:57",
+  "date": "2026-11-06T14:48:16",
   "seed": 42,
   "tfidf": {
     "ngram_range": [

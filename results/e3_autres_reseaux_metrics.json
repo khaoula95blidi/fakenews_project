@@ -1,0 +1,180 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "n": {
+    "train": 7432,
+    "val": 1403,
+    "test": 1396
+  },
+  "reseau_meilleur_validation": "clip_vit_b32",
+  "gains_vs_resnet18": {
+    "efficientnet_b0": [
+      -2.694367112165752,
+      -5.344447797478553,
+      -0.40125835434162427
+    ],
+    "vit_b_16": [
+      -2.89390568082617,
+      -5.792162514816307,
+      -0.18701807450850122
+    ],
+    "clip_vit_b32": [
+      7.543357378964933,
+      4.701347233454009,
+      10.16235609821456
+    ]
+  },
+  "res": {
+    "resnet18": {
+      "best_C": 0.003,
+      "val_macro_f1": 0.6819738885771673,
+      "test": {
+        "acc": 0.6991404011461319,
+        "prec": 0.7001164596273293,
+        "rec": 0.698925260884915,
+        "macro_f1": 0.6986201664189093,
+        "auc": 0.7546542607781801
+      },
+      "val": {
+        "acc": 0.6821097647897363,
+        "prec": 0.6826173108018394,
+        "rec": 0.6822298766485806,
+        "macro_f1": 0.6819738885771673,
+        "auc": 0.7396167367757931
+      }
+    },
+    "efficientnet_b0": {
+      "best_C": 0.0001,
+      "val_macro_f1": 0.6817215392816306,
+      "test": {
+        "acc": 0.671919770773639,
+        "prec": 0.6721887550200802,
+        "rec": 0.6717858403737367,
+        "macro_f1": 0.6716764952972518,
+        "auc": 0.7385660155833066
+      },
+      "val": {
+        "acc": 0.6821097647897363,
+        "prec": 0.683323251850429,
+        "rec": 0.6823010018492552,
+        "macro_f1": 0.6817215392816306,
+        "auc": 0.7386148875205755
+      }
+    },
+    "vit_b_16": {
+      "best_C": 0.001,
+      "val_macro_f1": 0.683083028083028,
+      "test": {
+        "acc": 0.6697707736389685,
+        "prec": 0.6698186068198577,
+        "rec": 0.6696983505340854,
+        "macro_f1": 0.6696811096106476,
+        "auc": 0.7428497828353736
+      },
+      "val": {
+        "acc": 0.6835352815395581,
+        "prec": 0.6849358777689145,
+        "rec": 0.6837407791257697,
+        "macro_f1": 0.683083028083028,
+        "auc": 0.7469853075656893
+      }
+    },
+    "clip_vit_b32": {
+      "best_C": 0.001,
+      "val_macro_f1": 0.7848612255232349,
+      "test": {
+        "acc": 0.7743553008595988,
+        "prec": 0.7754110867122341,
+        "rec": 0.7741713671108483,
+        "macro_f1": 0.7740537402085587,
+        "auc": 0.8590944358235425
+      },
+      "val": {
+        "acc": 0.7854597291518175,
+        "prec": 0.7892659063230308,
+        "rec": 0.7857424454876141,
+        "macro_f1": 0.7848612255232349,
+        "auc": 0.8578044666626025
+      }
+    }
+  },
+  "table": {
+    "val_macro_f1": {
+      "E3 officiel ResNet-18 (grille d'origine)": 0.682,
+      "E3ctrl ResNet-18": 0.682,
+      "E3b EfficientNet-B0": 0.6817,
+      "E3c ViT-B/16": 0.6831,
+      "E3d CLIP ViT-B/32": 0.7849
+    },
+    "acc": {
+      "E3 officiel ResNet-18 (grille d'origine)": 0.6991,
+      "E3ctrl ResNet-18": 0.6991,
+      "E3b EfficientNet-B0": 0.6719,
+      "E3c ViT-B/16": 0.6698,
+      "E3d CLIP ViT-B/32": 0.7744
+    },
+    "macro_f1": {
+      "E3 officiel ResNet-18 (grille d'origine)": 0.6986,
+      "E3ctrl ResNet-18": 0.6986,
+      "E3b EfficientNet-B0": 0.6717,
+      "E3c ViT-B/16": 0.6697,
+      "E3d CLIP ViT-B/32": 0.7741
+    },
+    "auc": {
+      "E3 officiel ResNet-18 (grille d'origine)": 0.7547,
+      "E3ctrl ResNet-18": 0.7547,
+      "E3b EfficientNet-B0": 0.7386,
+      "E3c ViT-B/16": 0.7428,
+      "E3d CLIP ViT-B/32": 0.8591
+    },
+    "marge_acc_95": {
+      "E3 officiel ResNet-18 (grille d'origine)": 0.0241,
+      "E3ctrl ResNet-18": 0.0241,
+      "E3b EfficientNet-B0": 0.0246,
+      "E3c ViT-B/16": 0.0247,
+      "E3d CLIP ViT-B/32": 0.0219
+    }
+  },
+  "per_type": {
+    "n": {
+      "0 vrai": 702,
+      "1 satire": 63,
+      "2 trompeur": 212,
+      "3 bots": 21,
+      "4 image manipulee": 347,
+      "5 fausse connexion": 51
+    },
+    "resnet18": {
+      "0 vrai": 0.736,
+      "1 satire": 0.587,
+      "2 trompeur": 0.486,
+      "3 bots": 0.333,
+      "4 image manipulee": 0.778,
+      "5 fausse connexion": 0.824
+    },
+    "efficientnet_b0": {
+      "0 vrai": 0.695,
+      "1 satire": 0.651,
+      "2 trompeur": 0.519,
+      "3 bots": 0.571,
+      "4 image manipulee": 0.706,
+      "5 fausse connexion": 0.824
+    },
+    "vit_b_16": {
+      "0 vrai": 0.682,
+      "1 satire": 0.714,
+      "2 trompeur": 0.547,
+      "3 bots": 0.381,
+      "4 image manipulee": 0.715,
+      "5 fausse connexion": 0.765
+    },
+    "clip_vit_b32": {
+      "0 vrai": 0.806,
+      "1 satire": 0.714,
+      "2 trompeur": 0.585,
+      "3 bots": 0.381,
+      "4 image manipulee": 0.856,
+      "5 fausse connexion": 0.804
+    }
+  }
+}

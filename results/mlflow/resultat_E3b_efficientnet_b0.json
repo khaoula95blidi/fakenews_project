@@ -1,0 +1,41 @@
+{
+  "etape": "E3b",
+  "nom": "efficientnet_b0_gele_lr",
+  "params": {
+    "entree": "image",
+    "representation": "EfficientNet-B0 (gele)",
+    "classifieur": "LogisticRegression, class_weight=balanced, C choisi sur la validation (grille 1e-5 a 1)",
+    "C_retenu": 0.0001,
+    "dim_embedding": 1280,
+    "n_train": 7432,
+    "n_val": 1403,
+    "n_test": 1396
+  },
+  "metrics": {
+    "accuracy": 0.671919770773639,
+    "f1_macro": 0.6716764952972518,
+    "auc": 0.7385660155833066,
+    "val_accuracy": 0.6821097647897363,
+    "val_f1_macro": 0.6817215392816306,
+    "val_auc": 0.7386148875205755,
+    "ecart_f1_vs_resnet18_points": -2.694367112165752,
+    "ecart_f1_ic95_bas": -5.344447797478553,
+    "ecart_f1_ic95_haut": -0.40125835434162427,
+    "acc_type_vrai": 0.6951566951566952,
+    "n_type_vrai": 702.0,
+    "acc_type_satire": 0.6507936507936508,
+    "n_type_satire": 63.0,
+    "acc_type_trompeur": 0.5188679245283019,
+    "n_type_trompeur": 212.0,
+    "acc_type_bots": 0.5714285714285714,
+    "n_type_bots": 21.0,
+    "acc_type_image_manipulee": 0.7060518731988472,
+    "n_type_image_manipulee": 347.0,
+    "acc_type_fausse_connexion": 0.8235294117647058,
+    "n_type_fausse_connexion": 51.0
+  },
+  "tags": {
+    "source": "notebook Kaggle 02_embeddings_e2_e3 (partie 2)",
+    "avertissement_types": "Types a 6 classes : correspondance des etiquettes en cours de verification ; fausse_connexion : 51 publications ; bots : 21."
+  }
+}
