@@ -13,3 +13,13 @@ venv/
 # Editeur / systeme
 .vscode/
 .DS_Store
+
+# Suivi MLflow et fichiers regenerables
+mlflow.db
+mlartifacts/
+emb/
+results/
+mlflow.db
+mlartifacts/
+emb/
+results/
