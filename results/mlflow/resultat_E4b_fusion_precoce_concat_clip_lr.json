@@ -1,0 +1,44 @@
+{
+  "etape": "E4b",
+  "nom": "fusion_precoce_concat_clip_lr",
+  "params": {
+    "entree": "titre + image",
+    "representation": "concat DistilBERT (gele, 768) + CLIP ViT-B/32 (gele, 512)",
+    "classifieur": "LogisticRegression, class_weight=balanced, C choisi sur la validation",
+    "C_retenu": 0.001,
+    "dim_embedding": 1280,
+    "grille_C": "etendue : 1e-5 a 1",
+    "reference_gain": "E2",
+    "n_train": 7432,
+    "n_val": 1403,
+    "n_test": 1396
+  },
+  "metrics": {
+    "accuracy": 0.8373925501432665,
+    "f1_macro": 0.8372381247345231,
+    "auc": 0.9074484593216581,
+    "val_accuracy": 0.8503207412687099,
+    "val_f1_macro": 0.850192807546341,
+    "val_auc": 0.9217500863663151,
+    "gain_f1_points": 3.6388744937774886,
+    "gain_f1_ic95_bas": 1.875592811331204,
+    "gain_f1_ic95_haut": 5.353570268450249,
+    "gain_acc_points": 3.6532951289398374,
+    "acc_type_vrai": 0.8632478632478633,
+    "n_type_vrai": 702.0,
+    "acc_type_satire": 0.6825396825396826,
+    "n_type_satire": 63.0,
+    "acc_type_trompeur": 0.6509433962264151,
+    "n_type_trompeur": 212.0,
+    "acc_type_bots": 0.38095238095238093,
+    "n_type_bots": 21.0,
+    "acc_type_image_manipulee": 0.962536023054755,
+    "n_type_image_manipulee": 347.0,
+    "acc_type_fausse_connexion": 0.7843137254901961,
+    "n_type_fausse_connexion": 51.0
+  },
+  "tags": {
+    "source": "notebook Kaggle 05b_e4b_fusion_precoce_clip",
+    "avertissement_types": "Types a 6 classes : correspondance des etiquettes en cours de verification ; fausse_connexion : peu de publications ; bots : tres peu."
+  }
+}

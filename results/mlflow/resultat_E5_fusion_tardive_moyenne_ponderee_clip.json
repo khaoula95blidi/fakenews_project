@@ -1,0 +1,46 @@
+{
+  "etape": "E5b",
+  "nom": "fusion_tardive_moyenne_ponderee_clip",
+  "params": {
+    "entree": "titre + image",
+    "representation": "probabilites de E2 (DistilBERT gele) et E3d (CLIP ViT-B/32 gele)",
+    "classifieur": "p = w*p_texte + (1-w)*p_image, w choisi sur la validation",
+    "poids_texte": 0.4,
+    "pas_de_poids": 0.1,
+    "reference_gain": "E2",
+    "n_train": 7432,
+    "n_val": 1403,
+    "n_test": 1396
+  },
+  "metrics": {
+    "accuracy": 0.8431232091690545,
+    "f1_macro": 0.8430006752957308,
+    "auc": 0.9083906007537133,
+    "val_accuracy": 0.8503207412687099,
+    "val_f1_macro": 0.8502275333674938,
+    "val_auc": 0.9213416244995833,
+    "gain_f1_points": 4.215129549898256,
+    "gain_f1_ic95_bas": 2.4124797941987053,
+    "gain_f1_ic95_haut": 6.0495952453753175,
+    "gain_acc_points": 4.226361031518633,
+    "moyenne_simple_accuracy": 0.8345272206303725,
+    "moyenne_simple_f1_macro": 0.8344652985210619,
+    "moyenne_simple_auc": 0.9061101669170833,
+    "acc_type_vrai": 0.8660968660968661,
+    "n_type_vrai": 702.0,
+    "acc_type_satire": 0.6825396825396826,
+    "n_type_satire": 63.0,
+    "acc_type_trompeur": 0.6650943396226415,
+    "n_type_trompeur": 212.0,
+    "acc_type_bots": 0.3333333333333333,
+    "n_type_bots": 21.0,
+    "acc_type_image_manipulee": 0.9711815561959655,
+    "n_type_image_manipulee": 347.0,
+    "acc_type_fausse_connexion": 0.803921568627451,
+    "n_type_fausse_connexion": 51.0
+  },
+  "tags": {
+    "source": "notebook Kaggle 06b_e5b_fusion_tardive_clip",
+    "avertissement_types": "Types a 6 classes : correspondance des etiquettes en cours de verification ; fausse_connexion : peu de publications ; bots : tres peu."
+  }
+}
