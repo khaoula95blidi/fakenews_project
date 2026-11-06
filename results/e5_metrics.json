@@ -6,10 +6,10 @@
     "test": 1396
   },
   "reference_gain": "E2",
-  "gain_f1_points": 1.1433007537373419,
+  "gain_f1_points": 4.215129549898256,
   "gain_f1_ic95": [
-    -0.22429334330088535,
-    2.511581494564033
+    2.4124797941987053,
+    6.0495952453753175
   ],
   "res": {
     "E2": {
@@ -30,40 +30,40 @@
         "auc": 0.861538051019319
       }
     },
-    "E3": {
-      "best_C": 0.003,
-      "val_macro_f1": 0.6819738885771673,
+    "E3d": {
+      "best_C": 0.001,
+      "val_macro_f1": 0.7848612255232349,
       "val": {
-        "acc": 0.6821097647897363,
-        "prec": 0.6826173108018394,
-        "rec": 0.6822298766485806,
-        "macro_f1": 0.6819738885771673,
-        "auc": 0.7396167367757931
+        "acc": 0.7854597291518175,
+        "prec": 0.7892659063230308,
+        "rec": 0.7857424454876141,
+        "macro_f1": 0.7848612255232349,
+        "auc": 0.8578044666626025
       },
       "test": {
-        "acc": 0.6991404011461319,
-        "prec": 0.7001164596273293,
-        "rec": 0.698925260884915,
-        "macro_f1": 0.6986201664189093,
-        "auc": 0.7546542607781801
+        "acc": 0.7743553008595988,
+        "prec": 0.7754110867122341,
+        "rec": 0.7741713671108483,
+        "macro_f1": 0.7740537402085587,
+        "auc": 0.8590944358235425
       }
     },
-    "E5": {
-      "poids_texte": 0.5,
-      "val_macro_f1": 0.821799452112699,
+    "E5b": {
+      "poids_texte": 0.4,
+      "val_macro_f1": 0.8502275333674938,
       "val": {
-        "acc": 0.8218104062722738,
-        "prec": 0.8219995446154846,
-        "rec": 0.8218699831331666,
-        "macro_f1": 0.821799452112699,
-        "auc": 0.8960129244650369
+        "acc": 0.8503207412687099,
+        "prec": 0.8515164485752721,
+        "rec": 0.8504663781015668,
+        "macro_f1": 0.8502275333674938,
+        "auc": 0.9213416244995833
       },
       "test": {
-        "acc": 0.8123209169054442,
-        "prec": 0.812419395910857,
-        "rec": 0.8122654909398426,
-        "macro_f1": 0.8122823873341216,
-        "auc": 0.8804835094460455
+        "acc": 0.8431232091690545,
+        "prec": 0.8438440755670512,
+        "rec": 0.842990796160825,
+        "macro_f1": 0.8430006752957308,
+        "auc": 0.9083906007537133
       }
     }
   },
@@ -71,26 +71,26 @@
     "acc": {
       "Majoritaire (tout vrai)": 0.502865329512894,
       "E2 texte DistilBERT": 0.8008595988538681,
-      "E3 image ResNet-18": 0.6991404011461319,
-      "E5 fusion tardive (moyenne ponderee)": 0.8123209169054442
+      "E3d image CLIP ViT-B/32": 0.7743553008595988,
+      "E5b fusion tardive (moyenne ponderee, CLIP)": 0.8431232091690545
     },
     "macro_f1": {
       "Majoritaire (tout vrai)": 0.334604385128694,
       "E2 texte DistilBERT": 0.8008493797967482,
-      "E3 image ResNet-18": 0.6986201664189093,
-      "E5 fusion tardive (moyenne ponderee)": 0.8122823873341216
+      "E3d image CLIP ViT-B/32": 0.7740537402085587,
+      "E5b fusion tardive (moyenne ponderee, CLIP)": 0.8430006752957308
     },
     "auc": {
       "Majoritaire (tout vrai)": 0.5,
       "E2 texte DistilBERT": 0.861538051019319,
-      "E3 image ResNet-18": 0.7546542607781801,
-      "E5 fusion tardive (moyenne ponderee)": 0.8804835094460455
+      "E3d image CLIP ViT-B/32": 0.8590944358235425,
+      "E5b fusion tardive (moyenne ponderee, CLIP)": 0.9083906007537133
     },
     "marge_acc_95": {
       "Majoritaire (tout vrai)": 0.026228667959762184,
       "E2 texte DistilBERT": 0.020949383336938514,
-      "E3 image ResNet-18": 0.024058995889840888,
-      "E5 fusion tardive (moyenne ponderee)": 0.020482601557231556
+      "E3d image CLIP ViT-B/32": 0.021927850812767935,
+      "E5b fusion tardive (moyenne ponderee, CLIP)": 0.019078236703291507
     }
   },
   "per_type": {
@@ -110,29 +110,29 @@
       "4 image manipulee": 0.942,
       "5 fausse connexion": 0.706
     },
-    "E3": {
-      "0 vrai": 0.736,
-      "1 satire": 0.587,
-      "2 trompeur": 0.486,
-      "3 bots": 0.333,
-      "4 image manipulee": 0.778,
-      "5 fausse connexion": 0.824
+    "E3d": {
+      "0 vrai": 0.806,
+      "1 satire": 0.714,
+      "2 trompeur": 0.585,
+      "3 bots": 0.381,
+      "4 image manipulee": 0.856,
+      "5 fausse connexion": 0.804
     },
-    "E5": {
-      "0 vrai": 0.822,
-      "1 satire": 0.603,
-      "2 trompeur": 0.646,
+    "E5b": {
+      "0 vrai": 0.866,
+      "1 satire": 0.683,
+      "2 trompeur": 0.665,
       "3 bots": 0.333,
-      "4 image manipulee": 0.954,
-      "5 fausse connexion": 0.863
+      "4 image manipulee": 0.971,
+      "5 fausse connexion": 0.804
     },
-    "E5-E2": {
-      "0 vrai": 0.019,
-      "1 satire": 0.0,
-      "2 trompeur": -0.029,
+    "E5b-E2": {
+      "0 vrai": 0.063,
+      "1 satire": 0.08,
+      "2 trompeur": -0.01,
       "3 bots": -0.143,
-      "4 image manipulee": 0.012,
-      "5 fausse connexion": 0.157
+      "4 image manipulee": 0.029,
+      "5 fausse connexion": 0.098
     }
   }
 }

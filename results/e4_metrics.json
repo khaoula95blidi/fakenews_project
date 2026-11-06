@@ -6,10 +6,10 @@
     "test": 1396
   },
   "reference_gain": "E2",
-  "gain_f1_points": 0.9883481888858348,
+  "gain_f1_points": 3.6388744937774886,
   "gain_f1_ic95": [
-    -0.7535252975341333,
-    2.641469526739022
+    1.875592811331204,
+    5.353570268450249
   ],
   "res": {
     "E2": {
@@ -30,40 +30,40 @@
         "auc": 0.861538051019319
       }
     },
-    "E3": {
-      "best_C": 0.003,
-      "val_macro_f1": 0.6819738885771673,
+    "E3d": {
+      "best_C": 0.001,
+      "val_macro_f1": 0.7848612255232349,
       "val": {
-        "acc": 0.6821097647897363,
-        "prec": 0.6826173108018394,
-        "rec": 0.6822298766485806,
-        "macro_f1": 0.6819738885771673,
-        "auc": 0.7396167367757931
+        "acc": 0.7854597291518175,
+        "prec": 0.7892659063230308,
+        "rec": 0.7857424454876141,
+        "macro_f1": 0.7848612255232349,
+        "auc": 0.8578044666626025
       },
       "test": {
-        "acc": 0.6991404011461319,
-        "prec": 0.7001164596273293,
-        "rec": 0.698925260884915,
-        "macro_f1": 0.6986201664189093,
-        "auc": 0.7546542607781801
+        "acc": 0.7743553008595988,
+        "prec": 0.7754110867122341,
+        "rec": 0.7741713671108483,
+        "macro_f1": 0.7740537402085587,
+        "auc": 0.8590944358235425
       }
     },
-    "E4": {
+    "E4b": {
       "best_C": 0.001,
-      "val_macro_f1": 0.8317171248973352,
+      "val_macro_f1": 0.850192807546341,
       "val": {
-        "acc": 0.8317890235210263,
-        "prec": 0.8326185326832924,
-        "rec": 0.8319128614684306,
-        "macro_f1": 0.8317171248973352,
-        "auc": 0.9001016074295352
+        "acc": 0.8503207412687099,
+        "prec": 0.8518950383781997,
+        "rec": 0.8504877156617692,
+        "macro_f1": 0.850192807546341,
+        "auc": 0.9217500863663151
       },
       "test": {
-        "acc": 0.8108882521489972,
-        "prec": 0.8115692682565424,
-        "rec": 0.8107506753039895,
-        "macro_f1": 0.8107328616856065,
-        "auc": 0.8809453434813665
+        "acc": 0.8373925501432665,
+        "prec": 0.8382885544686556,
+        "rec": 0.8372435281657185,
+        "macro_f1": 0.8372381247345231,
+        "auc": 0.9074484593216581
       }
     }
   },
@@ -71,26 +71,26 @@
     "acc": {
       "Majoritaire (tout vrai)": 0.502865329512894,
       "E2 texte DistilBERT": 0.8008595988538681,
-      "E3 image ResNet-18": 0.6991404011461319,
-      "E4 fusion precoce (concat + LR)": 0.8108882521489972
+      "E3d image CLIP ViT-B/32": 0.7743553008595988,
+      "E4b fusion precoce (concat CLIP + LR)": 0.8373925501432665
     },
     "macro_f1": {
       "Majoritaire (tout vrai)": 0.334604385128694,
       "E2 texte DistilBERT": 0.8008493797967482,
-      "E3 image ResNet-18": 0.6986201664189093,
-      "E4 fusion precoce (concat + LR)": 0.8107328616856065
+      "E3d image CLIP ViT-B/32": 0.7740537402085587,
+      "E4b fusion precoce (concat CLIP + LR)": 0.8372381247345231
     },
     "auc": {
       "Majoritaire (tout vrai)": 0.5,
       "E2 texte DistilBERT": 0.861538051019319,
-      "E3 image ResNet-18": 0.7546542607781801,
-      "E4 fusion precoce (concat + LR)": 0.8809453434813665
+      "E3d image CLIP ViT-B/32": 0.8590944358235425,
+      "E4b fusion precoce (concat CLIP + LR)": 0.9074484593216581
     },
     "marge_acc_95": {
       "Majoritaire (tout vrai)": 0.026228667959762184,
       "E2 texte DistilBERT": 0.020949383336938514,
-      "E3 image ResNet-18": 0.024058995889840888,
-      "E4 fusion precoce (concat + LR)": 0.02054249172902835
+      "E3d image CLIP ViT-B/32": 0.021927850812767935,
+      "E4b fusion precoce (concat CLIP + LR)": 0.019357449195128665
     }
   },
   "per_type": {
@@ -110,28 +110,28 @@
       "4 image manipulee": 0.942,
       "5 fausse connexion": 0.706
     },
-    "E3": {
-      "0 vrai": 0.736,
-      "1 satire": 0.587,
-      "2 trompeur": 0.486,
-      "3 bots": 0.333,
-      "4 image manipulee": 0.778,
-      "5 fausse connexion": 0.824
-    },
-    "E4": {
-      "0 vrai": 0.835,
-      "1 satire": 0.651,
-      "2 trompeur": 0.613,
+    "E3d": {
+      "0 vrai": 0.806,
+      "1 satire": 0.714,
+      "2 trompeur": 0.585,
       "3 bots": 0.381,
-      "4 image manipulee": 0.942,
+      "4 image manipulee": 0.856,
+      "5 fausse connexion": 0.804
+    },
+    "E4b": {
+      "0 vrai": 0.863,
+      "1 satire": 0.683,
+      "2 trompeur": 0.651,
+      "3 bots": 0.381,
+      "4 image manipulee": 0.963,
       "5 fausse connexion": 0.784
     },
-    "E4-E2": {
-      "0 vrai": 0.032,
-      "1 satire": 0.048,
-      "2 trompeur": -0.062,
+    "E4b-E2": {
+      "0 vrai": 0.06,
+      "1 satire": 0.08,
+      "2 trompeur": -0.024,
       "3 bots": -0.095,
-      "4 image manipulee": 0.0,
+      "4 image manipulee": 0.021,
       "5 fausse connexion": 0.078
     }
   }
