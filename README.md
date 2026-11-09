@@ -85,7 +85,6 @@ pip install -r requirements.txt
 # Télécharger les TSV multimodaux de Fakeddit (voir le dépôt officiel) et les placer dans data/raw/
 # (Optionnel) reconstruire les splits et les images, puis les nettoyer
 python src/make_subset.py
-python src/clean_placeholders.py
 # Lancer la baseline E1
 python src/e1_tfidf.py
 ```
