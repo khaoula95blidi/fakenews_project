@@ -20,10 +20,16 @@ d'où l'on lance Python : le notebook, le script et l'interface voient donc les 
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 import unicodedata
 from pathlib import Path
+
+# Un seul thread de calcul pour numpy (OpenBLAS), à fixer AVANT d'importer numpy. Sinon chaque
+# processus réserve un tampon mémoire par cœur et, avec l'interface MLflow ouverte en même temps,
+# la machine manque de mémoire : « OpenBLAS error: Memory allocation still failed ».
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
 
 import mlflow
 import numpy as np
@@ -185,8 +191,10 @@ def enregistrer_json(chemin):
 
 def ouvrir_interface(port=5000):
     print(f"Interface MLflow : http://127.0.0.1:{port}  (Ctrl+C pour arrêter)")
+    # Un seul processus serveur (4 par défaut) : largement suffisant en local et bien plus léger.
     subprocess.run(
-        [sys.executable, "-m", "mlflow", "ui", "--backend-store-uri", URI_BASE, "--port", str(port)]
+        [sys.executable, "-m", "mlflow", "ui", "--backend-store-uri", URI_BASE,
+         "--port", str(port), "--workers", "1"]
     )
 
 

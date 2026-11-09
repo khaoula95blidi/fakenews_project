@@ -4,6 +4,7 @@ pillow==12.2.0
 requests==2.34.2
 scikit-learn==1.8.0
 matplotlib>=3.8
+mlflow==3.18.0
 
 # A ajouter quand on les utilise (embeddings sur Kaggle/Colab, demo) :
 # torch
