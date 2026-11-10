@@ -18,7 +18,7 @@ Comparer trois familles de modèles (texte seul, image seule, fusion texte + ima
 | E4b | Fusion précoce : DistilBERT + CLIP concaténés | notebook prêt, résultats à reporter |
 | E5b | Fusion tardive : moyenne pondérée des probabilités de E2 et E3d | notebook prêt, résultats à reporter |
 | RQ3 | Robustesse : texte masqué (30 %, 50 %), image floutée | à faire |
-| RQ4 | Généralisation à des sous-reddits absents de l'entraînement | à faire |
+| RQ4 | Généralisation à des sous-reddits absents de l'entraînement | fait |
 | MLOps | Suivi MLflow : fait. Application Streamlit et image Docker : à faire | en cours |
 
 ## Données
@@ -51,12 +51,14 @@ Comparer trois familles de modèles (texte seul, image seule, fusion texte + ima
 │   ├── eda_fakeddit.ipynb                  # analyse exploratoire
 │   ├── 02_embeddings_e2_e3.ipynb           # E2 (DistilBERT), E3 (ResNet-18) et autres réseaux d'images
 │   ├── 05b_e4b_fusion_precoce_clip.ipynb   # E4b : fusion précoce
-│   └── 06b_e5b_fusion_tardive_clip.ipynb   # E5b : fusion tardive
+│   ├── 06b_e5b_fusion_tardive_clip.ipynb   # E5b : fusion tardive
+│   └── rq4-generalisation-sous-reddits.ipynb # RQ4 : généralisation à des sous-reddits inconnus
 ├── results/                                # métriques (.json) et probabilités (.npy) de chaque expérience
 │   ├── e1_metrics.json  e2_e3_metrics.json  e3_autres_reseaux_metrics.json
 │   ├── e4b_metrics.json  e5b_metrics.json  eda_resume.json
+│   ├── rq4_metrics.json                   # détails des plis et résultats RQ4
 │   └── mlflow/                             # un résultat par expérience, à charger dans MLflow
-└── figures/                                # figures de l'analyse exploratoire
+└── figures/                                # figures de l'analyse exploratoire et rq4_generalisation.png
 ```
 
 Non versionnés (voir `.gitignore`) : `data/raw/`, `emb/` (représentations calculées sur Kaggle), `mlflow.db`, `mlartifacts/`, `.venv/`.

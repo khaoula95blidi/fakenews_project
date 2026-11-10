@@ -1,0 +1,51 @@
+{
+  "etape": "RQ4",
+  "nom": "sous_reddits_inconnus",
+  "params": {
+    "entree": "titre + image",
+    "decoupage": "K plis par sous-reddit contre K plis au hasard (controle)",
+    "K": 5,
+    "modeles": "sous-reddit seul, E1 TF-IDF, E2 DistilBERT, E3d CLIP, E4b fusion precoce, E5b fusion tardive",
+    "graine": 42,
+    "n_publications": 10231
+  },
+  "metrics": {
+    "n_plis": 5,
+    "n_sous_reddits": 21,
+    "plancher_f1_hasard": 0.33252868997647383,
+    "plancher_f1_sous_reddits": 0.34046260247690857,
+    "f1_sous_reddit_seul_aleatoire": 1.0,
+    "f1_sous_reddit_seul_sous_reddits": 0.3035398182107232,
+    "auc_sous_reddit_seul_aleatoire": 1.0,
+    "auc_sous_reddit_seul_sous_reddits": 0.5,
+    "variation_f1_pts_sous_reddit_seul": -69.64601817892768,
+    "f1_e1_aleatoire": 0.75130185816507,
+    "f1_e1_sous_reddits": 0.5528209222934107,
+    "auc_e1_aleatoire": 0.821029547595364,
+    "auc_e1_sous_reddits": 0.5560082004036737,
+    "variation_f1_pts_e1": -19.848093587165927,
+    "f1_e2_aleatoire": 0.7987364016151889,
+    "f1_e2_sous_reddits": 0.5797561430424494,
+    "auc_e2_aleatoire": 0.8796611605730004,
+    "auc_e2_sous_reddits": 0.6502222915206735,
+    "variation_f1_pts_e2": -21.89802585727395,
+    "f1_e3d_aleatoire": 0.7683203316320733,
+    "f1_e3d_sous_reddits": 0.5428931182681502,
+    "auc_e3d_aleatoire": 0.8480371739184104,
+    "auc_e3d_sous_reddits": 0.5664920402903311,
+    "variation_f1_pts_e3d": -22.5427213363923,
+    "f1_e4b_aleatoire": 0.8398182095061223,
+    "f1_e4b_sous_reddits": 0.5698991835590916,
+    "auc_e4b_aleatoire": 0.9161821559856786,
+    "auc_e4b_sous_reddits": 0.6257689611075403,
+    "variation_f1_pts_e4b": -26.991902594703067,
+    "f1_e5b_aleatoire": 0.8423716217330128,
+    "f1_e5b_sous_reddits": 0.548275084339903,
+    "auc_e5b_aleatoire": 0.9146101160265061,
+    "auc_e5b_sous_reddits": 0.5743503599939297,
+    "variation_f1_pts_e5b": -29.409653739310983
+  },
+  "tags": {
+    "source": "notebook Kaggle 08_rq4_sous_reddits"
+  }
+}
